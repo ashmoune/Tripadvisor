@@ -1,16 +1,15 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: TS-Reg, sans-serif;
   background-color: #ffffff;
-  width: 1135px;
-  box-sizing: border-box;
 }
 
-main {
+main .container {
   background-color: #ffffff;
-  margin: 10px 30px 8px 30px;
+  margin: 0 auto;
   padding: 5px;
   border-radius: 20px;
   width: 1024px;
@@ -25,10 +24,10 @@ main {
 /*                  */
 header {
   height: 100px;
+  display: flex;
   /* border-bottom: 1px solid grey; */
 }
-.icon .logo {
-  border-color: solid red 3px;
+header .logo {
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -92,7 +91,6 @@ ul li i {
 ul li {
   border: solid black 1px;
   background-color: #ffffff;
-
   border-radius: 15px;
   padding: 20px 10px;
   flex: 1;
@@ -108,28 +106,27 @@ ul li i:hover {
 }
 
 .picture-bloc {
+  margin-top: 10px;
   height: 430px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   display: flex;
   gap: 2px;
-  border: solid blue 2px;
 }
 .left-bloc {
-  background: orangered;
   height: 100%;
   flex: 1;
 }
 
+.left-bloc img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 .right-bloc {
-  border: 2px solid black;
-  width: 480px;
+  width: 50%;
   height: 100%;
 }
 .right-bloc > li {
-  height: calc(50% - 1px);
-  width: 100%;
-}
-.left-bloc > li img {
   height: calc(50% - 1px);
   width: 100%;
 }
@@ -139,11 +136,69 @@ ul li i:hover {
   width: 100%;
   object-fit: cover;
 }
+.navigation {
+  margin: 20px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
 h2 {
   font-size: 35px;
   margin-top: 45px;
   font-weight: bolder;
 }
-.paraph {
+.description {
+  /* border: blue 2px solid; */
+  display: flex;
+  /* justify-content: space-between; */
+
+  gap: 15%;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+  overflow: hidden;
+  /* justify-content: flex-start; */
+}
+.leftblock {
+  /* border: red 2px solid; */
+  max-height: 100%;
+  width: 50%;
+  display: block;
+}
+.leftblock .paraph {
   margin: 20px 5px 15px 4px;
+}
+.rightblock {
+  /* border: black solid 2px; */
+  /* display: block; */
+
+  border-radius: 25px;
+}
+.rightblock .img {
+  /* border-radius: 25px; */
+  background-color: #ff5d5d;
+  /* align-items: flex-end; */
+  /* border: green 2px solid; */
+  height: 100%;
+  width: 70%;
+}
+.rightblock .img button {
+  background-color: black;
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.img h3 {
+  font-weight: bold;
+  font-size: 26px;
+  padding: 20px;
+}
+.img > p1 {
+  padding: 20px;
+}
+.rightblock .plan img {
+  object-fit: cover;
+  height: 70%;
+  width: 70%;
 }
