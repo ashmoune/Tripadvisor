@@ -460,4 +460,7 @@ footer img {
     /* display: flex; */
     padding-top: 800px;
   }
+  .third-section-main {
+    display: block;
+  }
 }
